@@ -53,6 +53,14 @@ function singleNumber(nums: number[]): number {
  *
  * The reduce here just simplifies the previous for loop into one line, it's not doing anything different.
  * The initializer 0 is put there to prevent the the scenerio where nums is an empty list
+ *
+ * The reason this works: the XOR operation is both commutative and associative.
+ * So one can use a XORation (just like a SUMmation) of the numbers and regardless
+ * the order of the elements to be XORed is it will yield the same result, i.e.,
+ * the same result as if the unique element was the first element and
+ * all the other came in pairs afterwards.
+ * From this it's easy to deduce that the final result is equal to the first element,
+ * which is the unique element as stated before.
  */
 function solveXOR(nums: number[]) {
 	// bitwise XOR
