@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-function reverse(x: number): number {
+function reverseInteger(x: number): number {
 	let num = x;
 	let revArray = [];
 	while (Math.abs(num) > 0) {
@@ -22,3 +22,5 @@ function reverse(x: number): number {
 	else return res;
 }
 // @lc code=end
+
+export { reverseInteger };
