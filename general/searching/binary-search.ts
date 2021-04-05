@@ -14,14 +14,10 @@
  *       / \    / \
  *      2   6  10 14    (3
  *
- * @param array sorted array of values that will be searched through
- * @param key value that has to be found
- */
-
-/**
  * @param array searchable and sorted array
  * @param key the value that has to be found
  */
+
 function binarySearch(array: number[], key: number): number {
 	// set initial values
 	let low = 0;
