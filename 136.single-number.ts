@@ -17,22 +17,22 @@ function singleNumber(nums: number[]): number {
 	if (nums.length === 1) return nums[0];
 
 	for (let i = 0; i < nums.length; i++) {
-		if (typeof nums[i + 1] !== "undefined") {
+		if (typeof nums[i + 1] !== 'undefined') {
 			// next item exists
 			if (nums[i] !== nums[i + 1]) {
 				// ...and does not match with current
-				if (typeof nums[i - 1] !== "undefined") {
+				if (typeof nums[i - 1] !== 'undefined') {
 					// previus item exists
 					if (nums[i - 1] !== nums[i]) {
 						// ... and does not match with current
 						return nums[i];
 					}
 				}
-				if (typeof nums[i - 1] === "undefined") return nums[i];
+				if (typeof nums[i - 1] === 'undefined') return nums[i];
 			}
 		} else {
 			// next item does not exist
-			if (typeof nums[i - 1] !== "undefined") {
+			if (typeof nums[i - 1] !== 'undefined') {
 				if (nums[i] !== nums[i - 1]) return nums[i];
 			}
 		}
